@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'cdtc',
+        'USER': 'cdtcadmin',
+        'PASSWORD': 'Projectroot.',
+        'HOST': 'cdtc-project.mysql.database.azure.com',
+        'PORT': '3306'
     }
 }
 
