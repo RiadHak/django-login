@@ -25,11 +25,11 @@ SECRET_KEY = 'django-insecure-y#sx^o!zio-n*w57x5t773ugf11j8ay08)(62*f(ryt4^e$t8*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cdtc.azurewebsites.net']
+ALLOWED_HOSTS = ['cdtc-dashboard.azurewebsites.net']
 
 
 # Application definition
-CSRF_TRUSTED_ORIGINS=['http://cdtc.azurewebsites.net/']
+CSRF_TRUSTED_ORIGINS=['https://cdtc-dashboard.azurewebsites.net/']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
