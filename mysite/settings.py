@@ -20,18 +20,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-yto$4x=iv$=)!-89_!12w&nx4t4n%6j3d21dvppwxl(brscw$b'
+SECRET_KEY = 'django-insecure-qx$8&nu7v+de@s7-qvcdyr%d!1_mjdq119lot^))2gqb11=tsq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ["cdtc-dashboard.azurewebsites.net"]
-ALLOWED_HOSTS = ['cdtc-dashboard.azurewebsites.net']
+ALLOWED_HOSTS = ['cdtc-dash.azurewebsites.net']
 
 
 # Application definition
- 
-CSRF_TRUSTED_ORIGINS = ['https://cdtc-dashboard.azurewebsites.net/']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +47,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -78,12 +75,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'cdtc',
-        'USER': 'cdtcadmin',
-        'PASSWORD': 'Projectroot.',
-        'HOST': 'cdtc-project.mysql.database.azure.com',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
